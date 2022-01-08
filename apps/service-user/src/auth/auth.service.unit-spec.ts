@@ -1,11 +1,11 @@
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { Test, TestingModule } from '@nestjs/testing';
+import { config } from './config';
 import { UsersModule } from '../users/users.module';
 import { AuthService } from './auth.service';
-import { jwtConstants } from './constants';
-import { JwtStrategy } from './strategies/jwt.strategy';
-import { LocalStrategy } from './strategies/local.strategy';
+import { JwtStrategy } from './auth.jwt.strategy';
+import { LocalStrategy } from './auth.local.strategy';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -16,7 +16,7 @@ describe('AuthService', () => {
         UsersModule,
         PassportModule,
         JwtModule.register({
-          secret: jwtConstants.secret,
+          secret: config.jwt.secret,
           signOptions: { expiresIn: '60s' },
         }),
       ],
@@ -40,7 +40,7 @@ describe('validateUser', () => {
         UsersModule,
         PassportModule,
         JwtModule.register({
-          secret: jwtConstants.secret,
+          secret: config.jwt.secret,
           signOptions: { expiresIn: '60s' },
         }),
       ],
@@ -70,7 +70,7 @@ describe('validateLogin', () => {
         UsersModule,
         PassportModule,
         JwtModule.register({
-          secret: jwtConstants.secret,
+          secret: config.jwt.secret,
           signOptions: { expiresIn: '60s' },
         }),
       ],
