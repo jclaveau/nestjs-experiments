@@ -1,5 +1,6 @@
 [![Tests](https://github.com/jclaveau/nestjs-experiments/actions/workflows/tests.yml/badge.svg)](https://github.com/jclaveau/nestjs-experiments/actions/workflows/tests.yml)
 [![Lint](https://github.com/jclaveau/nestjs-experiments/actions/workflows/lint.yml/badge.svg?event=push)](https://github.com/jclaveau/nestjs-experiments/actions/workflows/lint.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjclaveau%2Fnestjs-experiments.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjclaveau%2Fnestjs-experiments?ref=badge_shield)
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -49,3 +50,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjclaveau%2Fnestjs-experiments.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjclaveau%2Fnestjs-experiments?ref=badge_large)
