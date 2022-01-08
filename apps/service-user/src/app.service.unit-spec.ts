@@ -18,8 +18,8 @@ describe('AppService', () => {
   });
 
   describe('app service', () => {
-    it('should return "Hello World!"', () => {
-      expect(appService.getHello()).toBe('Hello World!');
+    it('should return "Coucou! :)"', () => {
+      expect(appService.getHello()).toBe('Coucou! :)');
     });
   });
 });
