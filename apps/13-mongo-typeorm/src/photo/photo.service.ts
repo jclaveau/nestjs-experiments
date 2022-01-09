@@ -20,12 +20,7 @@ export class PhotoService {
   }
 
   async findAll(): Promise<Photo[]> {
-    // console.log(this.photoRepository)
     //https://stackoverflow.com/questions/69362941/cannot-read-property-prototype-of-undefined-nestjs-with-typeorm-and-mongodb
     return await this.photoRepository.find();
-  }
-
-  async truncate(): Promise<void> {
-    return await this.photoRepository.clear();
   }
 }

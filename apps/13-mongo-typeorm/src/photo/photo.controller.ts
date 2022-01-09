@@ -15,11 +15,6 @@ export class PhotoController {
     return this.photoService.create(dto);
   }
 
-  @Get('/truncate')
-  truncate(): Promise<void> {
-    return this.photoService.truncate();
-  }
-
   @Get()
   findAll(): Promise<Photo[]> {
     return this.photoService.findAll();
