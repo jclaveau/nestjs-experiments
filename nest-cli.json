@@ -1,12 +1,14 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/service-user/src",
   "monorepo": true,
-  "root": "apps/service-user",
+
+
+  "root": "apps/13-mongo-typeorm",
+  "sourceRoot": "apps/13-mongo-typeorm",
   "compilerOptions": {
-    "webpack": true,
-    "tsConfigPath": "apps/service-user/tsconfig.app.json"
+    "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.json"
   },
+
   "projects": {
     "service-user": {
       "type": "application",
@@ -15,6 +17,16 @@
       "sourceRoot": "apps/service-user/src",
       "compilerOptions": {
         "tsConfigPath": "apps/service-user/tsconfig.app.json"
+      }
+    },
+    "13-mongo-typeorm": {
+      "type": "application",
+      "entryFile": "main",
+
+      "root": "apps/13-mongo-typeorm",
+      "sourceRoot": "apps/13-mongo-typeorm/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.app.json"
       }
     },
     "common": {
