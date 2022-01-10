@@ -31,7 +31,7 @@
     "@nestjs/typeorm": "8.0.2",
     "@types/mongodb": "3.6.20",
     "class-validator": "0.13.2",
-    "github-actions-node-versions": "^1.0.3",
+    "github-actions-node-versions": "1.0.3",
     "mongodb": "3.7.3",
     "passport": "0.5.2",
     "passport-jwt": "4.0.0",
