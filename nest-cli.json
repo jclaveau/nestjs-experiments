@@ -6,7 +6,15 @@
   "root": "apps/13-mongo-typeorm",
   "sourceRoot": "apps/13-mongo-typeorm",
   "compilerOptions": {
-    "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.json"
+    "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.json",
+    "plugins": [
+      {
+        "name": "@nestjs/graphql",
+        "options": {
+          "introspectComments": true
+        }
+      }
+    ]
   },
 
   "projects": {
