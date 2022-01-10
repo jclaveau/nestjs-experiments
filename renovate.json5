@@ -3,5 +3,11 @@
     "config:base",
     ":dependencyDashboard"
   ],
-  automerge: true,
+  "packageRules": [ // https://stackoverflow.com/questions/68186550/renovate-automerge
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    }
+  ]
 }
