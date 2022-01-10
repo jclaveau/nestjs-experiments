@@ -5,6 +5,14 @@
 
 Expirementing architectures and features with [Nest](https://github.com/nestjs/nest) in real CI conditions.
 
+Goals:
+- Full end to end tests
+- Full coverage
+- Formatted with [ESlint](https://eslint.org/) (No prettier to avoid remain free of opinions).
+- Automatically updated dependencies (Handled by [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/))
+- [12-Factors](https://12factor.net/)
+- [Inversion of Control](https://www.tutorialsteacher.com/ioc/inversion-of-control)
+
 ## Installation
 
 ```bash
