@@ -1,7 +1,7 @@
 [![Tests](https://github.com/jclaveau/nestjs-experiments/actions/workflows/tests.yml/badge.svg)](https://github.com/jclaveau/nestjs-experiments/actions/workflows/tests.yml)
-[![Lint](https://github.com/jclaveau/nestjs-experiments/actions/workflows/lint.yml/badge.svg?event=push)](https://github.com/jclaveau/nestjs-experiments/actions/workflows/lint.yml)
+[![Format](https://github.com/jclaveau/nestjs-experiments/actions/workflows/format.yml/badge.svg?event=push)](https://github.com/jclaveau/nestjs-experiments/actions/workflows/format.yml)
 [![codecov](https://codecov.io/gh/jclaveau/nestjs-experiments/branch/main/graph/badge.svg?token=C5ElNWNc41)](https://codecov.io/gh/jclaveau/nestjs-experiments)
-## Description
+## Description (WIP)
 
 Expirementing architectures and features with [Nest](https://github.com/nestjs/nest) in real CI conditions.
 

@@ -7,7 +7,6 @@ module.exports = {
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
   ],
   root: true,
   env: {
@@ -20,7 +19,26 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    "@typescript-eslint/no-unused-vars": [ "error",
+    'newline-per-chained-call': [ "error",
+      {
+        "ignoreChainWithDepth": 2
+      }
+    ],
+    semi: [
+      "error",
+      "never",
+      { "beforeStatementContinuationChars": "always"}
+    ],
+    "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [ "warn",
       {
         "vars": "all",
         "args": "after-used",
