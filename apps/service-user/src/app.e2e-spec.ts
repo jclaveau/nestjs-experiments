@@ -67,13 +67,13 @@ describe('E2E JWT Sample', () => {
 
   it('should get a JWT then successfully make a call', async () => {
     // curl -X POST http://localhost:3000/auth/login -d '{"username": "user@app.com", "password": "password"}' -H "Content-Type: application/json"
-    const manager = getMongoManager();
-    const user = new User();
+    const manager = getMongoManager()
+    const user = new User()
     Object.assign(user, {
       email: 'user@app.com',
       password: 'password',
-    });
-    const newUser = await manager.save(user);
+    })
+    const newUser = await manager.save(user)
 
     const loginReq = await request(app.getHttpServer())
       .post('/auth/login')

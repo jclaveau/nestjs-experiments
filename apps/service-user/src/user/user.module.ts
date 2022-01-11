@@ -1,8 +1,8 @@
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from '@nestjs/common'
+import { TypeOrmModule } from '@nestjs/typeorm'
 // import { getMongoManager, Repository } from "typeorm";
-import { User, UserService, UserController } from '.';
-export * from '.';
+import { User, UserService, UserController } from '.'
+export * from '.'
 
 @Module({
   imports: [
@@ -13,6 +13,6 @@ export * from '.';
     UserService,
     // Repository<User>
   ],
-  exports: [UserService]
+  exports: [UserService],
 })
 export class UserModule {}

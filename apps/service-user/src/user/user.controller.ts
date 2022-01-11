@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { User, UserService } from '.';
+import { Controller, Get } from '@nestjs/common'
+import { User, UserService } from '.'
 
 @Controller('user')
 export class UserController {
@@ -10,6 +10,6 @@ export class UserController {
 
     @Get()
     findAll(): Promise<User[]> {
-      return this.userService.findAll();
+      return this.userService.findAll()
     }
 }

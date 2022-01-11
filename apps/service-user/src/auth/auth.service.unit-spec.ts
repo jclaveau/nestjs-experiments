@@ -33,7 +33,7 @@ describe('AuthService', () => {
   ])
   .map(userData => Object.assign(new User(), userData))
 
-  let findOneMock = jest.fn()
+  const findOneMock = jest.fn()
 
   beforeAll(async () => {
     const moduleRef: TestingModule = await Test.createTestingModule({

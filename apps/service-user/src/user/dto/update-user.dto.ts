@@ -1,9 +1,9 @@
-import { IsDefined, IsEmail } from 'class-validator';
+import { IsDefined, IsEmail } from 'class-validator'
 
 export class UpdateUserDto {
   @IsEmail()
-  email: string;
+  email: string
 
   @IsDefined()
-  password: string;
+  password: string
 }
