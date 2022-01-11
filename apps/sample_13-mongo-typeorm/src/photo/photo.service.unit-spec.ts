@@ -1,10 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing'
 import { getRepositoryToken } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
-import { Photo } from './photo.entity'
-import { PhotoService } from './photo.service'
+import { Photo, PhotoService } from '.'
 
-describe('CatService', () => {
+describe('PhotoService', () => {
   let service: PhotoService
   let repository: Repository<Photo>
 

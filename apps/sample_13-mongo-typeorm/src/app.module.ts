@@ -10,6 +10,7 @@ import { PhotoModule, Photo } from './photo/photo.module'
       database: '13-mongo-typeorm',
       entities: [Photo],
       synchronize: true,
+      useUnifiedTopology: true,
     }),
     PhotoModule,
   ],

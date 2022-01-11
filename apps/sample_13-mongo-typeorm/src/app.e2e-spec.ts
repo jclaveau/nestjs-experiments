@@ -1,9 +1,11 @@
 import { INestApplication } from '@nestjs/common'
 import { Test } from '@nestjs/testing'
 import * as request from 'supertest'
-import { Photo } from './photo'
-import { TypeOrmModule } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { getRepositoryToken } from '@nestjs/typeorm'
+
+import { Photo } from './photo'
 import { AppModule } from './app.module'
 
 describe('E2E Basic CRUD', () => {
@@ -19,16 +21,15 @@ describe('E2E Basic CRUD', () => {
           database: '13-mongo-typeorm',
           entities: [Photo],
           synchronize: true,
+          useUnifiedTopology: true,
         }),
-        Repository,
-        Photo,
         AppModule,
       ],
     }).compile()
 
     app = modRef.createNestApplication()
 
-    photoRepository = app.get('PhotoRepository')
+    photoRepository = app.get(getRepositoryToken(Photo))
     try {
       await photoRepository.clear()
     } catch(e) {
@@ -70,7 +71,7 @@ describe('E2E Basic CRUD', () => {
       .query(photo_1_data)
       .expect(200)
       .expect('Content-Type', /json/)
-      
+
 
     expect(body)
       .toEqual({id: expect.any(String), ...photo_1_data})
@@ -81,7 +82,7 @@ describe('E2E Basic CRUD', () => {
       .get('/photo')
       .expect(200)
       .expect('Content-Type', /json/)
-      
+
 
     expect(body)
       .toEqual([{id: expect.any(String), ...photo_1_data}])
@@ -93,7 +94,7 @@ describe('E2E Basic CRUD', () => {
       .query(photo_2_data)
       .expect(200)
       .expect('Content-Type', /json/)
-      
+
 
     expect(body)
       .toEqual({id: expect.any(String), ...photo_2_data})
@@ -104,7 +105,7 @@ describe('E2E Basic CRUD', () => {
       .get('/photo')
       .expect(200)
       .expect('Content-Type', /json/)
-      
+
 
     expect(body)
       .toEqual([

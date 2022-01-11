@@ -2,19 +2,10 @@
   "collection": "@nestjs/schematics",
   "monorepo": true,
 
-
-  "root": "apps/13-mongo-typeorm",
-  "sourceRoot": "apps/13-mongo-typeorm",
+  "root": "apps/service-user",
+  "sourceRoot": "apps/service-user/src",
   "compilerOptions": {
-    "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.json",
-    "plugins": [
-      {
-        "name": "@nestjs/graphql",
-        "options": {
-          "introspectComments": true
-        }
-      }
-    ]
+    "tsConfigPath": "apps/service-user/tsconfig.app.json"
   },
 
   "projects": {
@@ -27,14 +18,32 @@
         "tsConfigPath": "apps/service-user/tsconfig.app.json"
       }
     },
-    "13-mongo-typeorm": {
+    "sample_13-mongo-typeorm": {
       "type": "application",
       "entryFile": "main",
 
-      "root": "apps/13-mongo-typeorm",
-      "sourceRoot": "apps/13-mongo-typeorm/src",
+      "root": "apps/sample_13-mongo-typeorm",
+      "sourceRoot": "apps/sample_13-mongo-typeorm/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/13-mongo-typeorm/tsconfig.app.json"
+        "tsConfigPath": "apps/sample_13-mongo-typeorm/tsconfig.app.json"
+      }
+    },
+    "sample_23-graphql-code-first": {
+      "type": "application",
+      "entryFile": "main",
+
+      "root": "apps/sample_23-graphql-code-first",
+      "sourceRoot": "apps/sample_23-graphql-code-first/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/sample_23-graphql-code-first/tsconfig.app.json",
+        "plugins": [
+          {
+            "name": "@nestjs/graphql",
+            "options": {
+              "introspectComments": true
+            }
+          }
+        ]
       }
     },
     "common": {

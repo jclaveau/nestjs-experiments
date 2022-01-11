@@ -24,12 +24,13 @@
   "dependencies": {
     "@nestjs/common": "8.2.4",
     "@nestjs/core": "8.2.4",
-    "@nestjs/graphql": "9.1.2",
+    "@nestjs/graphql": "^9.1.2",
     "@nestjs/jwt": "8.0.0",
     "@nestjs/passport": "8.0.1",
     "@nestjs/platform-express": "8.2.4",
     "@nestjs/typeorm": "8.0.2",
     "@types/mongodb": "3.6.20",
+    "bcrypt": "^5.0.1",
     "class-validator": "0.13.2",
     "github-actions-node-versions": "1.0.3",
     "mongodb": "3.7.3",
@@ -39,6 +40,7 @@
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.5.1",
+    "ts-md5": "^1.2.10",
     "typeorm": "0.2.41"
   },
   "devDependencies": {
