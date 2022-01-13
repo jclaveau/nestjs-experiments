@@ -1,19 +1,23 @@
 import { Module } from '@nestjs/common'
-import { TypeOrmModule } from '@nestjs/typeorm'
-import { AppController } from './app.controller'
-import { AppService } from './app.service'
-import { User, UserModule } from './user/user.module'
+import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm'
+import { getConnectionOptions } from 'typeorm'
+
+import { getDBConfig } from './configs/ormconfig';
+import './configs/dotenv';
+import { UserModule } from './user/user.module'
 import { AuthModule } from './auth/auth.module'
+import { AppService } from './app.service'
+import { AppController } from './app.controller'
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mongodb',
-      host: 'localhost',
-      database: 'service-user',
-      entities: [User],
-      synchronize: true,
-      useUnifiedTopology: true,
+    TypeOrmModule.forRootAsync({
+      imports:[],
+      inject:[],
+      useFactory: async () => {
+        const dbConfig = await getDBConfig()
+        return dbConfig
+      }
     }),
     UserModule,
     AuthModule,

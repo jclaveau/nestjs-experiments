@@ -2,10 +2,13 @@ import { INestApplication } from '@nestjs/common'
 import { Test } from '@nestjs/testing'
 import * as request from 'supertest'
 
+import * as dotenv from 'dotenv'
+
 import { Repository, getMongoManager } from 'typeorm'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { getRepositoryToken } from '@nestjs/typeorm'
 
+import { getDBConfig } from './configs/ormconfig';
 import { User } from './user'
 import { AppModule } from './app.module'
 
@@ -14,17 +17,14 @@ describe('E2E JWT Sample', () => {
   let userRepository: Repository<User>
 
   beforeAll(async () => {
+    const typeormConfig = await getDBConfig();
+    console.log(typeormConfig)
+
     const modRef = await Test.createTestingModule({
       imports: [
         AppModule,
-        TypeOrmModule.forRoot({
-          type: 'mongodb',
-          host: 'localhost',
-          database: 'service-user',
-          entities: [User],
-          synchronize: true,
-          useUnifiedTopology: true,
-        }),
+        // TypeOrmModule.forRoot(),
+        TypeOrmModule.forRoot(typeormConfig),
       ],
     }).compile()
 
