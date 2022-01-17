@@ -33,7 +33,7 @@
     "@types/mongodb": "3.6.20",
     "bcrypt": "5.0.1",
     "class-validator": "0.13.2",
-    "dotenv": "^11.0.0",
+    "dotenv": "13.0.1",
     "env-var": "^7.1.1",
     "github-actions-node-versions": "1.0.3",
     "mongodb": "3.7.3",
