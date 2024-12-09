@@ -36,7 +36,7 @@
     "dotenv": "^11.0.0",
     "env-var": "^7.1.1",
     "github-actions-node-versions": "1.0.3",
-    "mongodb": "3.7.3",
+    "mongodb": "3.7.4",
     "passport": "0.5.2",
     "passport-jwt": "4.0.0",
     "passport-local": "1.0.0",
