@@ -38,7 +38,7 @@
     "github-actions-node-versions": "1.0.3",
     "mongodb": "3.7.3",
     "passport": "0.5.2",
-    "passport-jwt": "4.0.0",
+    "passport-jwt": "4.0.1",
     "passport-local": "1.0.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
